@@ -25,9 +25,9 @@ def insert(path, txt):
     ori_shape = img.shape
     max_bytes = ori_shape[0] * ori_shape[1] // BYTES_PER_BYTE
     # Encode message with length
-    txt = '{}{}{}'.format(len(txt), FLAG, txt)
-    assert max_bytes >= len(
-        txt), "Message overflow the capacity:{}".format(max_bytes)
+    txt = f'{len(txt)}{FLAG}{txt}'
+    assert max_bytes >= len(txt), f"Message overflow the capacity:{max_bytes}"
+
     data = np.reshape(img, -1)
     for (idx, val) in enumerate(txt):
         encode(data[idx*BYTES_PER_BYTE: (idx+1) * BYTES_PER_BYTE], val)

@@ -46,7 +46,7 @@ class ZipBruter:
             try:
                 with ZipFile(self.file) as zipfile:
                     zipfile.extractall(pwd=passwd.encode())
-                print('Found passwd: %s' % passwd)
+                print(f'Found passwd: {passwd}')
             except (RuntimeError, BadZipfile):
                 pass
 

@@ -31,11 +31,11 @@ TABLE = np.array([
 
 def insert(path, txt):
     img = cv2.imread(path, cv2.IMREAD_ANYCOLOR)
-    txt = "{}{}{}".format(len(txt), FLAG, txt)
+    txt = f"{len(txt)}{FLAG}{txt}"
     row, col = img.shape[:2]
     max_bytes = (row // 8) * (col // 8) // 8
-    assert max_bytes >= len(
-        txt), "Message overflow the capacity:{}".format(max_bytes)
+    assert max_bytes >= len(txt), f"Message overflow the capacity:{max_bytes}"
+
     img = cv2.cvtColor(img, cv2.COLOR_BGR2YUV)
     # Just use the Y plane to store message, you can use all plane
     y, u, v = cv2.split(img)
