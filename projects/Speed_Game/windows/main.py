@@ -130,11 +130,20 @@ class CountryPage(tk.Frame):
                               command=lambda: self.checkBtn_click(master, input_text.get(), answer, canv,country_img))
         canv.create_window((600 // 2) - 80, (500 // 2) + 140, window=check_btn)
 
-        pass_btn = tk.Button(self, text="pass: " + str(pass_count) + "/3",
-                             width=10, height=1, font=BtnFont, foreground="yellow",
-                             background="black", relief="ridge",
-                             activebackground="yellow", activeforeground="black",
-                             command=lambda: self.passBtn_click(tk, canv, country_img))
+        pass_btn = tk.Button(
+            self,
+            text=f"pass: {str(pass_count)}/3",
+            width=10,
+            height=1,
+            font=BtnFont,
+            foreground="yellow",
+            background="black",
+            relief="ridge",
+            activebackground="yellow",
+            activeforeground="black",
+            command=lambda: self.passBtn_click(tk, canv, country_img),
+        )
+
         pass_window = canv.create_window((600 // 2) + 80, (500 // 2) + 140, window=pass_btn)
 
         self.num = 180
@@ -229,11 +238,20 @@ class CountryPage(tk.Frame):
 
         self.delete_img(canv, pass_window)
         BtnFont = tkFont.Font(family="Consolas", size=15)
-        pass_btn = tk.Button(self, text="pass: " + str(pass_count) + "/3",
-                             width=10, height=1, font=BtnFont, foreground="yellow",
-                             background="black", relief="ridge",
-                             activebackground="yellow", activeforeground="black",
-                             command=lambda: self.passBtn_click(tk, canv, country_img))
+        pass_btn = tk.Button(
+            self,
+            text=f"pass: {str(pass_count)}/3",
+            width=10,
+            height=1,
+            font=BtnFont,
+            foreground="yellow",
+            background="black",
+            relief="ridge",
+            activebackground="yellow",
+            activeforeground="black",
+            command=lambda: self.passBtn_click(tk, canv, country_img),
+        )
+
         pass_window = canv.create_window((600 // 2) + 80, (500 // 2) + 140, window=pass_btn)
 
     def delete_img(self, canv, dele_img_name):
@@ -250,7 +268,14 @@ class FinishPage(tk.Frame):
         canv.create_image(0, 0, anchor="nw", image=self.img)
 
         labelFont = tkFont.Font(family="Arial", size=40, weight="bold")
-        canv.create_text((600 // 2), (500 // 2) - 50, fill="white", text="total score : " + str(correct_count)+ "/15", font=labelFont)
+        canv.create_text(
+            600 // 2,
+            (500 // 2) - 50,
+            fill="white",
+            text=f"total score : {str(correct_count)}/15",
+            font=labelFont,
+        )
+
         canv.create_text((600 // 2), (500 // 2) + 50, fill="white", text="Good Job!", font=labelFont)
 
 
