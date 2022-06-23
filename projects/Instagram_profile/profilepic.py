@@ -6,7 +6,7 @@ from PIL import Image
 
 #Function to download profile picture of instagram accounts
 def pp_download(username):
-    
+
     url = f"https://www.instagram.com/{username}/"
     if x := re.match(r'^(https:)[/][/]www.([^/]+[.])*instagram.com', url):
         check_url1 = re.match(r'^(https:)[/][/]www.([^/]+[.])*instagram.com[/].*\?hl=[a-z-]{2,5}', url)

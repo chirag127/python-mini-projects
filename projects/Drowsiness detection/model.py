@@ -37,7 +37,7 @@ model = Sequential([
 
 #64 convolution filters used each of size 3x3
 #choose the best features via pooling
-    
+
 #randomly turn neurons on and off to improve convergence
     Dropout(0.25),
 #flatten since too many dimensions, we only want a classification output

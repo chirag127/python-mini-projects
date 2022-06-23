@@ -52,6 +52,6 @@ if __name__ == "__main__":
         output = main(sys.argv[-1])
         pp_download(sys.argv[-1])
         pprint.pprint(output)
-        
+
     else:
         print('Invalid paramaters Valid Command \n\tUsage : python main.py username')

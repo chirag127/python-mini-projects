@@ -15,9 +15,8 @@ def counter_label(label):
                 tt = datetime.utcfromtimestamp(counter)
                 string = tt.strftime('%H:%M:%S')
                 display = string
-	
+
             label['text'] = display
-	
 			# label.after(arg1, arg2) delays by 
 			# first argument given in milliseconds 
 			# and then calls the function given as second argument. 
