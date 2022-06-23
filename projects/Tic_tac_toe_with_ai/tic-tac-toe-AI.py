@@ -39,7 +39,7 @@ def choice():
     p1_choice = ' '
     p2_choice = ' '
     while p1_choice != 'X' or p1_choice != 'O':      #while loop; if the entered value isn't X or O;
-        
+
         #WHILE LOOP STARTS
 
         p1_choice = input(f"\n{p1_name}, Do you want to be X or O?\t")[0].upper()
@@ -251,11 +251,11 @@ while True:
         play_game = play()   
 
     while play_game:
-        
+
         ############################
         #PLAYER1
         if turn == p1_name:
-            
+
             #Displaying the board;
             display_board(theBoard, available)
 
@@ -291,7 +291,7 @@ while True:
 
 
         elif turn == p2_name:
-            
+
             #Displaying the board;
             display_board(theBoard, available)
 
@@ -333,7 +333,7 @@ while True:
     else:
         #if No;
         break
-        
+
     ####################################################################################
 
 print("\n\n\t\t\tTHE END!")
