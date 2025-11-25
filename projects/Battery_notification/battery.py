@@ -6,7 +6,7 @@ plugged = battery.power_plugged
 percent = battery.percent
 
 if percent <= 30 and plugged!=True:
- 
+
     # pip install py-notifier
     # pip install win10toast
     from pynotifier import Notification
