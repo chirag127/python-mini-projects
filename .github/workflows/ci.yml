@@ -1,0 +1,57 @@
+# CI Pipeline for Python Utility Scripts & Micro-Projects
+
+name: CI Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Fetch all history for accurate blame/history detection
+
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'uv'
+
+      - name: Install Dependencies with uv
+        run: |
+          python -m uv pip install --system --upgrade pip
+          python -m uv pip install --system --upgrade build
+          python -m uv pip install --system -r requirements-dev.txt
+          # If your project has subdirectories with their own requirements:
+          # python -m uv pip install --system -r ./src/subdir/requirements.txt
+
+      - name: Lint with Ruff
+        run: |
+          python -m uv pip install ruff
+          ruff check .
+          ruff format --check .
+
+      - name: Test with Pytest
+        run: |
+          python -m uv pip install pytest
+          pytest
+
+      # Optional: Add steps for building/packaging if applicable
+      # - name: Build Package
+      #   run: python -m build
+
+      # Optional: Add steps for uploading artifacts
+      # - name: Upload Artifacts
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: dist-package
+      #     path: dist/
+
+      # Add any other relevant CI steps here (e.g., security scans, documentation generation)
