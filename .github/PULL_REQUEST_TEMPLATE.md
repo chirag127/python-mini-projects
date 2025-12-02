@@ -1,27 +1,30 @@
-# Description
+# Pull Request Template
 
-A short summary of what is included in your Pull Request.
+## PR Description
 
-Fixes #(issue_no)
+Please provide a concise summary of the changes in this pull request. What problem does it solve, or what feature does it add?
 
-Replace `issue_no` in the above line, with the issue related to this PR.
-
-## Type of change
-
-Choosing one or more options from the following as per the nature of your Pull request.
+## Type of Change
 
 - [ ] Bug fix (non-breaking change which fixes an issue)
 - [ ] New feature (non-breaking change which adds functionality)
-- [ ] Documentation Update
+- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
+- [ ] Documentation update
+- [ ] Refactoring
+- [ ] Chore
 
-# Checklist:
-Please tick all the boxes that are fulfilled by your Pull Request.
+## Checklist
 
-- [ ] I have named my files and folder, according to this project's guidelines.
-- [ ] My code follows the style guidelines of this project.
-- [ ] My Pull Request has a descriptive title. (not a vague title like `Update index.md`)
-- [ ] I have commented on my code, particularly in hard-to-understand areas.
-- [ ] I have created a helpful and easy to understand `README.md`, according to the given [`README_TEMPLATE.`](https://github.com/chavarera/python-mini-projects/blob/master/README_TEMPLATE.md)
-- [ ] I have included a requirements.txt file (if external libraries are required.)
-- [ ] My changes do not produce any warnings.
-- [ ] I have added a working sample/screenshot of the script.
+- [ ] I have read the contributing guidelines.
+- [ ] My code follows the code style of this project.
+- [ ] My code passes all tests (unit, integration, e2e).
+- [ ] I have updated any relevant documentation.
+- [ ] I have provided clear explanations for any breaking changes.
+
+## Related Issues
+
+Closes #
+
+## Additional Context
+
+Any additional information that will help reviewers understand the context of this pull request.
