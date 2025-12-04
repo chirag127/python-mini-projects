@@ -1,30 +1,32 @@
 # Pull Request Template
 
-## PR Description
+## Description
 
-Please provide a concise summary of the changes in this pull request. What problem does it solve, or what feature does it add?
+*Please provide a concise and clear description of the changes introduced in this pull request. What problem does it solve? What new functionality does it add?*
 
 ## Type of Change
 
-- [ ] Bug fix (non-breaking change which fixes an issue)
-- [ ] New feature (non-breaking change which adds functionality)
-- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
-- [ ] Documentation update
-- [ ] Refactoring
-- [ ] Chore
+*   [ ] Bug fix (non-breaking change which fixes an issue)
+*   [ ] New feature (non-breaking change which adds functionality)
+*   [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
+*   [ ] Documentation update
+*   [ ] Refactor (code style, formatting, etc.)
+*   [ ] Performance improvement
+*   [ ] Other (please specify):
 
-## Checklist
+## Checklist:
 
-- [ ] I have read the contributing guidelines.
-- [ ] My code follows the code style of this project.
-- [ ] My code passes all tests (unit, integration, e2e).
-- [ ] I have updated any relevant documentation.
-- [ ] I have provided clear explanations for any breaking changes.
+*   [ ] I have read the **CONTRIBUTING** guide.
+*   [ ] My code adheres to the project's coding standards and practices.
+*   [ ] My change requires a change to the documentation, and I have updated the documentation accordingly.
+*   [ ] My change introduces new features or fixes, and I have added or updated relevant tests.
+*   [ ] All new and existing tests pass.
+*   [ ] I have updated the **AGENTS.md** file if my changes impact the AI agent's directives or functionality.
 
 ## Related Issues
 
-Closes #
+*Please link to any relevant issues here. e.g., `Closes #123`, `Fixes #456`.*
 
-## Additional Context
+## Additional Information
 
-Any additional information that will help reviewers understand the context of this pull request.
+*Provide any other context about the pull request, such as screenshots, performance metrics, or design decisions.*
