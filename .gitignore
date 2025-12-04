@@ -1,52 +1,105 @@
-# Byte-compiled / optimized / portable Python files
-*.pyc
-__pycache__/
+#============== Apex Technical Authority Standard Gitignore ===============#
+# Generated for a Professional Python Project (2025/2026 Standards)
 
-# Distribution / packaging
-*.egg-info/
-.tox/
-.venv/
-venv/
-ENV/
-env/
-
-# PyInstaller
-*.manifest
-*.spec
-
-# Installer logs
-pip-log.txt
-install.log
-compiler.log
-
-# Unit test / coverage reports
-.coverage
-.tox/
-htmlcov/
-.pytest_cache/
-.ruff_cache/
-
-# IDEs and editors
-.vscode/
-.idea/
-*.sublime-project
-*.sublime-workspace
-
-# OS generated files
+# --- System & OS Files ---
+# Ignore OS-generated files
 .DS_Store
 Thumbs.db
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 
-# Secrets and Credentials (NEVER COMMIT THESE)
+
+# --- Python Bytecode & Cache ---
+# Ignore Python byte-compiled files and cache directories
+__pycache__/
+*.py[cod]
+*$py.class
+
+
+# --- Virtual Environments ---
+# Ignore virtual environment directories to prevent committing dependencies
 .env
-*.env.*
-secrets.json
+env/
+venv/
+.venv/
+ENV/
+venv.bak/
+.spyderproject/
+.spyproject/
 
-# Build artifacts
-dist/
+
+# --- Package Management & Build Artifacts ---
+# Ignore artifacts from tools like uv, pip, setuptools, and PyInstaller
+.uv-cache/
+.pip-cache/
 build/
+dist/
+*.egg-info/
+*.egg
+*.whl
+*.tar.gz
+*.spec
 
-# Ruff cache
+
+# --- Testing & Code Coverage ---
+# Ignore artifacts from Pytest, Coverage.py, and other testing tools
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+nosetests.xml
+
+
+# --- Linters & Formatters ---
+# Ignore cache from tools like Ruff, Mypy, etc.
 .ruff_cache/
+.mypy_cache/
 
-# uv cache
-.uv_cache/
+
+# --- IDE & Editor Configuration ---
+# Ignore editor-specific configuration and project files
+.idea/
+.vscode/*
+!/.vscode/settings.json
+!/.vscode/tasks.json
+!/.vscode/launch.json
+!/.vscode/extensions.json
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+
+
+# --- Secrets & Local Configuration ---
+# NEVER commit secrets, API keys, or environment-specific configs
+*.env
+secrets.yml
+config.ini
+# Example: creds.json
+
+
+# --- Jupyter & IPython Notebooks ---
+# Ignore notebook checkpoints and temporary files
+.ipynb_checkpoints
+profile_default/
+
+
+# --- Logs & Databases ---
+# Ignore log files and local databases
+*.log
+logs/
+*.sqlite
+*.sqlite3
+db.sqlite3
+
+
+# --- Local Data Files ---
+# Ignore local data sets to keep the repository lightweight
+/data/
+*.csv
+*.json
+# Note: Uncomment above lines if your project uses them for local data storage.
