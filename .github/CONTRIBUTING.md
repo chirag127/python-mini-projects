@@ -1,80 +1,89 @@
-# Contributing Guidelines
+# Contributing Guidelines for PyAccelerator-Python-Code-Toolkit-For-Developers
 
-## 🚀 Welcome to the Apex Collective!
+Thank you for considering contributing to the **PyAccelerator-Python-Code-Toolkit-For-Developers** repository! We aim to foster a collaborative environment for high-quality, production-ready Python utilities.
 
-Thank you for considering contributing to this repository. As an **Apex Technical Authority** project, we uphold the highest standards of code quality, architectural integrity, and collaborative efficiency. Your contributions help us maintain our **Zero-Defect, High-Velocity, Future-Proof** philosophy.
+## 1. Our Pledge
 
-## 🎯 Project Vision
+In the interest of fostering an open and welcoming community, we, the maintainers and contributors, pledge to make participation in our project and our community a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation. We are committed to creating a positive and inclusive environment.
 
-This repository is a collection of **Python Utility Scripts** and **Micro-Projects** designed to enhance practical Python programming skills and demonstrate best practices. It serves as a curated platform for learning, experimentation, and the development of robust, reusable Python solutions.
+## 2. Code of Conduct
 
-## 💡 How to Contribute
+Our Code of Conduct can be found [here](https://github.com/chirag127/PyAccelerator-Python-Code-Toolkit-For-Developers/blob/main/CODE_OF_CONDUCT.md).
 
-We welcome contributions in various forms, from bug fixes and feature enhancements to documentation improvements and new utility scripts. Please adhere to the following guidelines:
+## 3. How to Contribute
 
-### 1. Code of Conduct
+We welcome contributions in the form of bug reports, feature requests, documentation improvements, and code submissions.
 
-All contributors must adhere to the [Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/version/2/1/0/CODE_OF_CONDUCT.html). We strive for a respectful, inclusive, and professional environment.
+### 3.1 Reporting Bugs
 
-### 2. Getting Started
+1.  **Search First:** Before reporting a bug, please check the [Issues](https://github.com/chirag127/PyAccelerator-Python-Code-Toolkit-For-Developers/issues) to see if your issue has already been reported.
+2.  **Reproducible Steps:** If your issue is not reported, please [open a new issue](https://github.com/chirag127/PyAccelerator-Python-Code-Toolkit-For-Developers/issues/new?template=bug_report.md). Provide clear, concise steps to reproduce the bug. Include:
+    *   The version of Python you are using.
+    *   The operating system.
+    *   Any relevant environment details.
+    *   Code snippets or a minimal reproducible example if possible.
 
-*   **Fork the Repository:** Create your own fork of the repository.
-*   **Clone Your Fork:** `git clone https://github.com/chirag127/Python-Utility-Scripts-And-Micro-Projects-Collection.git`
-*   **Set Up Development Environment:**
+### 3.2 Suggesting Enhancements or New Features
+
+1.  **Search First:** Check existing [Issues](https://github.com/chirag127/PyAccelerator-Python-Code-Toolkit-For-Developers/issues) to see if your idea has already been discussed.
+2.  **Open an Issue:** If your idea is new, please [open a new issue](https://github.com/chirag127/PyAccelerator-Python-Code-Toolkit-For-Developers/issues/new?template=feature_request.md) with a detailed description of the proposed enhancement.
+
+### 3.3 Contributing Code
+
+1.  **Fork the Repository:** Start by forking the [PyAccelerator-Python-Code-Toolkit-For-Developers](https://github.com/chirag127/PyAccelerator-Python-Code-Toolkit-For-Developers) repository to your GitHub account.
+2.  **Clone Your Fork:** Clone your forked repository locally:
+    bash
+    git clone https://github.com/chirag127/PyAccelerator-Python-Code-Toolkit-For-Developers.git
+    cd PyAccelerator-Python-Code-Toolkit-For-Developers
+    
+3.  **Set Up Development Environment:**
     *   Ensure you have Python 3.10+ installed.
-    *   Use `uv` for dependency management: `uv venv .venv` and `source .venv/bin/activate`.
-    *   Install project dependencies: `uv pip install -e .[dev]` (if a `pyproject.toml` with dev dependencies is present).
-    *   If no `pyproject.toml`, install directly: `uv pip install -r requirements.txt` (and `requirements-dev.txt`).
-*   **Create a New Branch:** `git checkout -b feature/your-feature-name` or `bugfix/your-bug-fix`.
+    *   Use `uv` for managing dependencies:
+        bash
+        uv venv
+        source .venv/bin/activate
+        uv pip install --editable ".[dev]"
+        
+4.  **Create a New Branch:** Create a descriptive branch for your changes:
+    bash
+    git checkout -b feature/your-feature-name # or bugfix/your-bug-fix
+    
+5.  **Make Your Changes:** Implement your bug fixes or new features. Follow the project's coding standards and principles (SOLID, DRY, YAGNI).
+6.  **Run Tests:** Ensure all tests pass. The project uses `Ruff` for linting and `Pytest` for testing.
+    bash
+    ruff check .
+    pytest
+    
+7.  **Update Documentation:** If your changes affect documentation, please update the relevant files (e.g., README, docstrings).
+8.  **Commit Your Changes:** Commit your changes with clear and concise commit messages.
+    bash
+    git add .
+    git commit -m "feat: Add descriptive commit message"
+    
+9.  **Push to Your Fork:** Push your branch to your fork on GitHub:
+    bash
+    git push origin feature/your-feature-name
+    
+10. **Open a Pull Request:** Go to the original repository and open a new pull request from your branch. Provide a clear description of your changes.
 
-### 3. Development Workflow
+### 3.4 Pull Request Process
 
-*   **Adhere to Apex Standards:** All code must follow the **Apex Technical Stacks (Late 2025 Standards)**, specifically for Python: **uv**, **Ruff**, **Pytest**, and **Modular Monolith** architecture principles.
-*   **Linting & Formatting:** Code must pass **Ruff** checks. Run `ruff check .` and `ruff format .` before committing.
-*   **Testing:** All new features or bug fixes must include comprehensive **Pytest** tests. Run `pytest` to ensure all tests pass.
-*   **Documentation:** Update relevant documentation (e.g., docstrings, README sections if applicable) for any changes.
-*   **Commit Messages:** Follow conventional commit message formatting (e.g., `feat: add new utility script for file processing` or `fix: resolve bug in data validation script`).
-*   **Pull Requests (PRs):**
-    *   Open PRs against the `main` branch.
-    *   Provide a clear and concise description of your changes.
-    *   Ensure all CI checks pass.
-    *   Reference any relevant issues.
+*   All pull requests will be reviewed by the maintainers.
+*   Please ensure your code adheres to the established coding style and passes all automated checks (linting, tests).
+*   Be prepared to make changes based on feedback.
 
-### 4. Contribution Types
+## 4. Architectural Principles & AI Agent Directives
 
-*   **New Utility Scripts:** If you have a useful Python utility script, please consider contributing it. Ensure it follows best practices, includes docstrings, and has tests if applicable.
-*   **Micro-Projects:** Substantial new micro-projects should be well-defined, modular, and demonstrate clear learning objectives or practical applications.
-*   **Bug Fixes:** If you find a bug, please open an issue first (if one doesn't exist) and then submit a PR with the fix.
-*   **Documentation:** Improvements to README files, docstrings, or CONTRIBUTING guidelines are always welcome.
-*   **Refactoring:** Suggestions for improving code structure, readability, or performance are valuable, provided they align with Apex architectural principles.
+This project adheres to **Apex Technical Authority** standards, emphasizing Zero-Defect, High-Velocity, and Future-Proof development.
 
-### 5. Code Structure & Architecture
+*   **Architecture:** Primarily **Modular Monolith** for clear separation of concerns.
+*   **Python Toolchain:** Python 3.10+, **uv** for dependency management, **Ruff** for linting/formatting, **Pytest** for testing.
+*   **AI Integration:** Leverages **Google Gemini API** (`gemini-3-pro` by default) for intelligent automation.
+*   **CLI Framework:** Utilizes `Click` for a robust command-line interface.
 
-This repository generally follows a **Modular Monolith** pattern for its micro-projects. Utility scripts are typically self-contained. Adhere to the following principles:
+For detailed AI Agent Directives and specific commands, please refer to the [AGENTS.md](https://github.com/chirag127/PyAccelerator-Python-Code-Toolkit-For-Developers/blob/main/AGENTS.md) file.
 
-*   **SOLID Principles:** Strive for Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, and Dependency Inversion.
-*   **DRY (Don't Repeat Yourself):** Avoid redundant code.
-*   **YAGNI (You Ain't Gonna Need It):** Implement only what is necessary.
-*   **Readability:** Write clear, maintainable code with appropriate comments and docstrings.
+## 5. Licensing
 
-### 6. Reporting Issues
+This project is licensed under the **CC BY-NC** license. See the [LICENSE](https://github.com/chirag127/PyAccelerator-Python-Code-Toolkit-For-Developers/blob/main/LICENSE) file for details.
 
-Before opening a new issue, please check if a similar issue already exists. Provide detailed information when reporting issues, including:
-
-*   Project/Script Name
-*   Python Version
-*   Steps to reproduce
-*   Expected vs. Actual behavior
-*   Screenshots or error logs (if applicable)
-
-### 7. Asking Questions
-
-For general questions about the projects or how to use them, please use the GitHub Discussions feature if available, or open a well-defined issue tagged as a 'question'.
-
-## 🤝 Thank You!
-
-Your contributions are vital to the growth and quality of this project. We look forward to collaborating with you!
-
----*
-
-*This document is dynamically generated. For specific technical directives, consult the `AGENTS.md` file and the project's `README.md`.*
